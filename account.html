@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=0">
+    <link rel="stylesheet" href="css/account.css">
+    <title>首页</title>
+</head>
+
+<body>
+    <div class="common">
+        <div id="search" class="boxSizing">
+            <div class="ipt_area boxSizing">
+                <img class="search_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUM5RUQ0QkFCMkU1MTFFNUE4MDNFMkU5NkI5N0FEOEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQzNzZCMDhCMkU1MTFFNUE4MDNFMkU5NkI5N0FEOEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBQzlFRDRCOEIyRTUxMUU1QTgwM0UyRTk2Qjk3QUQ4QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBQzlFRDRCOUIyRTUxMUU1QTgwM0UyRTk2Qjk3QUQ4QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtM4qkMAAAJ4SURBVHjavJc5aBRRGMdnNyK6BsEjqBgPMGCIMbEyXgGTRrwWxG20FEEUAgoWaiwsVo2FikHRIAop1MIDVNTOKxFRBONRpBA8oiAe8URFEP1/8FsY4svM7GZ2P/jx3s7xfjPzrm8TbR2nvZCoExmxQEwWUzjeJ96IO+KceOLlEYkA8WKxG2GU6BI7xe0oFycdx1LiuLiO9JM4KtJiuhgpRohpYqU4wjWN4qY4xvm83nicuCIaxC+xT+wX30LaKRebxQ4e7K5YIfqjvHHKJ30p5otdEaQW30VWzBUvuPcqDxEqPoS0j8/W4+UfT7n3NW0dCBM3ifV83jTyQsOkq8RPsYEHGVScpWwv8E0HxgNx0MYQM8MpnsPo/SL2evGFDcyPvHGtS5yhflF8jlH8VZyhvtolXkT9khd/XKNsdIln+vol7nhMWe0Sj6f+rgjit5Rjg+bxcK+EkWTkWUwqQvsTKPtd4l7qNUUQ11P2usTd1NNFEC/xbZn/ic/7xOUxSkeLtdQvuMQP2cbGiC0xircyY7pc2UluVLdSbhezY5DWIP7ra9spviFOsn/aZ6kcgnQiy6+11enq34HzuEXcE1VcXFuAdBaDtYrfthxXhIl/iOXILbe6z2caFUGYopvsnhnikfjNA1zmfGCyZ4tJszjBp8qSyhwWy+iCMqjkWDup0h7u6RDzxDr6uIFdqixqetuEOGp62016e8t3bJtvj7dMdVPuxLCAhmzALSRRyFCvJhO1+MCKZMKzgyT0bWKq2AivOBYozkXPENOhFv6BpOkOy+dOJUuwEf0Raxi0CaZtcynEuRlj/zqesf12lkps8V4sFc9tif4nwABdmYTwet4UPgAAAABJRU5ErkJggg==" alt="">
+                <!--  <input id="txt" class="boxSizing"  placeholder="搜索客户和联系人"> -->
+                <span id="txt" class="search-des" class="boxSizing">搜索客户和联系人</span>
+            </div>
+            <a href="javascript:;" id="addAccount" class="add_bus"><i></i></a>
+        </div>
+        <div id="trigger" class="boxSizing">
+            <div class="btn active boxSizing" id="company">客户</div>
+            <div class="btn boxSizing" id="linkman">联系人</div>
+            <div id="filter" class="filter normal"></div>
+        </div>
+    </div>
+    <div id="content">
+        <ul id="list">
+            <li>
+                <div class="top boxSizing" id="B">B</div>
+                <div value="8233067" class="con boxSizing">
+                    <div class="info"> <span class="accountName">北京众标网络科技有限公司</span><em class="sign_in"></em></div>
+                </div>
+            </li>
+            <li>
+                <div class="top boxSizing" id="D">D</div>
+                <div value="8202033" class="con boxSizing">
+                    <div class="info"> <span class="accountName">大客户</span><em class="sign_in"></em></div>
+                </div>
+                <div value="7012156" class="con boxSizing">
+                    <div class="info"> <span class="accountName">滴滴打车</span><em class="sign_in"></em></div>
+                </div>
+                <div value="10998006" class="con boxSizing">
+                    <div class="info"> <span class="accountName">滴滴答答</span><em class="sign_in"></em></div>
+                </div>
+            </li>
+            <li>
+                <div class="top boxSizing" id="H">H</div>
+                <div value="8233101" class="con boxSizing">
+                    <div class="info"> <span class="accountName">海淀驾校</span><em class="sign_in"></em></div>
+                </div>
+                <div value="8233078" class="con boxSizing">
+                    <div class="info"> <span class="accountName">河南启运有限公司</span><em class="sign_in"></em></div>
+                </div>
+                <div value="8233110" class="con boxSizing">
+                    <div class="info"> <span class="accountName">华誉科技有限公司</span><em class="sign_in"></em></div>
+                </div>
+            </li>
+            <li>
+                <div class="top boxSizing" id="K">K</div>
+                <div value="10014118" class="con boxSizing">
+                    <div class="info"> <span class="accountName">客户001</span><em class="sign_in"></em></div>
+                </div>
+            </li>
+            <li>
+                <div class="top boxSizing" id="L">L</div>
+                <div value="7787316" class="con boxSizing">
+                    <div class="info"> <span class="accountName">良必</span><em class="sign_in"></em></div>
+                </div>
+            </li>
+            <li>
+                <div class="top boxSizing" id="P">P</div>
+                <div value="8250622" class="con boxSizing">
+                    <div class="info"> <span class="accountName">pc-仁科</span><em class="sign_in"></em></div>
+                </div>
+            </li>
+            <li>
+                <div class="top boxSizing" id="Q">Q</div>
+                <div value="7787198" class="con boxSizing">
+                    <div class="info"> <span class="accountName">前度科技</span><em class="sign_in"></em></div>
+                </div>
+            </li>
+            <li>
+                <div class="top boxSizing" id="R">R</div>
+                <div value="8250706" class="con boxSizing">
+                    <div class="info"> <span class="accountName">仁科</span><em class="sign_in"></em></div>
+                </div>
+            </li>
+            <li>
+                <div class="top boxSizing" id="S">S</div>
+                <div value="8233087" class="con boxSizing">
+                    <div class="info"> <span class="accountName">山东临沂临沭五特生物化肥有限公司</span><em class="sign_in"></em></div>
+                </div>
+                <div value="8233086" class="con boxSizing">
+                    <div class="info"> <span class="accountName">山东枣庄润勇电子科技有限公司</span><em class="sign_in"></em></div>
+                </div>
+                <div value="8233077" class="con boxSizing">
+                    <div class="info"> <span class="accountName">山西淼源水资源处理有限公司</span><em class="sign_in"></em></div>
+                </div>
+                <div value="8233100" class="con boxSizing">
+                    <div class="info"> <span class="accountName">石家庄市公安交通管理局</span><em class="sign_in"></em></div>
+                </div>
+            </li>
+            <li>
+                <div class="top boxSizing" id="T">T</div>
+                <div value="11151767" class="con boxSizing">
+                    <div class="info"> <span class="accountName">淘宝网</span><em class="sign_in"></em></div>
+                </div>
+            </li>
+            <li>
+                <div class="top boxSizing" id="Z">Z</div>
+                <div value="8233109" class="con boxSizing">
+                    <div class="info"> <span class="accountName">浙江众合科技股份有限公司</span><em class="sign_in"></em></div>
+                </div>
+                <div value="8233069" class="con boxSizing">
+                    <div class="info"> <span class="accountName">中国石化集团</span><em class="sign_in"></em></div>
+                </div>
+                <div value="7480349" class="con boxSizing">
+                    <div class="info"> <span class="accountName">中国移动</span><em class="sign_in"></em></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="filter_area" class="boxSizing">
+        <div class="shadow">
+            <div class="title">客户类型</div>
+            <div class="content">
+                <div id="all" class="filter_btn boxSizing active">全部</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

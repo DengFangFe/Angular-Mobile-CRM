@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="scotchApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>首页</title>
+</head>
+
+<body ng-controller="mainController">
+    <div id="main">
+    	<div ng-view></div>
+    </div>
+    <footer>
+        <div class="index"><em></em>
+            <a href="#/"><p>首页</p></a>
+        </div>
+        <div class="account"><em></em>
+            <a href="#/account"><p>客户</p></a>
+        </div>
+        <div class="opportunity"><em></em>
+            <a href="#/opp"><p>商机</p></a>
+        </div>
+        <div class="service"><em></em>
+            <a href="#/me"><p>我</p></a>
+        </div>
+    </footer>
+</body>
+
+</html>
+ <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+ <script type="text/javascript" src="js/index.js"></script>

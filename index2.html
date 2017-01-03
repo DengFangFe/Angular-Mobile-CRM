@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="scotchApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>首页</title>
+</head>
+
+<body ng-controller="mainController">
+    <header>
+        <div id="sort" class="boxSizing">
+            <div class="behavior active boxSizing">今日工作</div>
+            <div class="performance  boxSizing">统计分析</div>
+        </div>
+    </header>
+    <div class="swiper-container">
+        <section class="index-body swiper-wrapper">
+            <div id="behaviorPage" class="boxSizing page swiper-slide">
+                <div class="schedule-body">
+                    <div class="schedule-body-null">
+                        <div class="schedule-null-content"><span class="null-ico"></span>
+                            <p>今天没有日程哦</p><a href="javascript:;" class="index-add-schdule">马上添加</a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="performancePage" class="boxSizing page swiper-slide">
+                <div class="schedule-body">
+                    <div class="schedule-body-null">
+                        <div class="schedule-null-content"><span class="null-ico"></span>
+                            <p>今天没有日程哦</p><a href="javascript:;" class="index-add-schdule">马上添加</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
